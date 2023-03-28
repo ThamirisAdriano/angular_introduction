@@ -8,6 +8,7 @@ import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.component';
 import { MeuPrimeiro2Component } from './meu-primeiro2/meu-primeiro2.component';
 
 import { CursosModule } from './cursos/cursos.module';
+import { DataBindingComponent } from './data-binding/data-binding.component';
 
 
 
@@ -16,6 +17,7 @@ import { CursosModule } from './cursos/cursos.module';
     AppComponent, 
     MeuPrimeiroComponent,
     MeuPrimeiro2Component,
+    DataBindingComponent,
   ],
   imports: [ //metadado de imports, colocamos outros módulos importados
     BrowserModule,
