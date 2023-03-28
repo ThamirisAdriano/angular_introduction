@@ -1,5 +1,5 @@
 <section class="property-binding">
-    <article>
+    <!-- <article>
         <h3>
             Interpolation/ Interporlação
         </h3>
@@ -12,5 +12,69 @@
     <img [src]="urlImagem2">
     <article>
 
+    </article> -->
+
+    <article>
+        <h3>Class e Style Binding</h3>
+        <div>Selecione uma classe: 
+        <select #classe (change)="0">
+            <option value="alert-primary">primary</option>
+            <option value="alert-secondary">secondary</option>
+            <option value="alert-success">success</option>
+            <option value="alert-danger">danger</option>
+            <option value="alert-warning">warning</option>
+            <option value="alert-info">info</option>
+            <option value="alert-light">light</option>
+            <option value="alert-dark">dark</option>
+        </select>
+        <br><br>
+
+        <div class="alert {{ classe.value }} " role="alert">
+            Texto colorido de acordo com comobox.
+        </div>
+
+        <div class="alert" role="alert"
+        [class.alert-primary]="classe.value == 'alert-primary'">
+            A simple primary alert—check it out!
+          </div>
+          <div class="alert" role="alert"
+          [class.alert-secondary]="classe.value == 'alert-secondary'">>
+            A simple secondary alert—check it out!
+          </div>
+          <div class="alert" role="alert"
+          [class.alert-success]="classe.value == 'alert-success'">>
+            A simple success alert—check it out!
+          </div>
+          <div class="alert" role="alert"
+          [class.alert-danger]="classe.value == 'alert-danger'">>
+            A simple danger alert—check it out!
+          </div>
+          <div class="alert" role="alert"
+          [class.alert-warning]="classe.value == 'alert-warning'">>
+            A simple warning alert—check it out!
+          </div>
+          <div class="alert" role="alert"
+          [class.alert-info]="classe.value == 'alert-info'">>
+            A simple info alert—check it out!
+          </div>
+          <div class="alert" role="alert"
+          [class.alert-light]="classe.value == 'alert-light'">>
+            A simple light alert—check it out!
+          </div>
+          <div class="alert" role="alert"
+          [class.alert-dark]="classe.value == 'alert-dark'">>
+            A simple dark alert—check it out!
+          </div>
+
+          <br>
+
+          <div class="alert alert-danger" role="alert"
+          [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+            Texto aparece somente quando tiver erro
+          </div>
+
+    </div>
     </article>
+
+
 </section>
